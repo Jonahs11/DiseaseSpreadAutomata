@@ -242,7 +242,7 @@ def stats(mat):
             if mat[y][x] == simvars.infec or mat[y][x] == simvars.rest:
                 totalinfec += 1
 
-    avginfec = totalinfec / totalpop
+    avginfec = (totalinfec * 1.0) / totalpop
     avginfecpct = (avginfec * 100) // 1
 
     print("After " + str(simvars.gencount) + " generations, " + str(totalinfec) + " people out of a total of " + str(
